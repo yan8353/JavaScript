@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //回調函數: 將函數資料作為一個參數傳遞給另一個參數
+
+        // setInterval(() => {} ,1000)
+        function fun (fn){
+            fn();
+        }
+        fun( () => {
+            console.log("我是回調函數")
+        })
+    </script>
+</body>
+</html>

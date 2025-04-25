@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // []:表示指定範圍
+        // // 用戶輸入
+        // var str = "123abc456def"
+        // // 規定郵箱格式
+        // var reg = /^\w{5,12}@163\.com$/;
+        // if(reg.test(str)){
+        //     console.log("通過驗證");
+        // }else{
+        //     console.log("驗證失敗");
+        // }
+        // // test返回值是布林值 ，exec得返回值是匹配的內容
+
+        // []:表示指定範圍
+        // 用戶輸入
+        // var str = "123abc456def"
+        // // 去掉字串中的字母
+        // var reg = /[a-zA-Z]/g
+        // var result = str.replace(reg,"")
+        // console.log(result);
+        
+        
+
+        // []:表示指定範圍
+        // 用戶輸入
+        var str = "2025-03-31"
+        // 擷取字符串
+        var reg = /^(\d{4})-(\d{2})-(\d{2})$/ ;
+        var result = reg.exec(str);
+        console.log(result[1]);
+        console.log(result[2]);
+        console.log(result[3]);
+
+    </script>
+</body>
+</html>

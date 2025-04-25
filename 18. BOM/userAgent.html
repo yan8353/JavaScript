@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>裝置偵測</title>
+</head>
+<body>
+  <script>
+    window.onload = function () {
+      let equipment = checkagent(navigator.userAgent);
+      console.log("偵測到的設備資訊：", equipment);
+    };
+
+    function checkagent(ua) {
+      let isWindowsPhone = /(?:Windows Phone)/.test(ua);
+      let isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone;
+      let isAndroid = /(?:Android)/.test(ua);
+      let isFireFox = /(?:Firefox)/.test(ua);
+      let isChrome = /(?:Chrome|CriOS)/.test(ua);
+      let isTablet = /(?:iPad|PlayBook)/.test(ua) || 
+                     (isAndroid && !/(?:Mobile)/.test(ua)) || 
+                     (isFireFox && /(?:Tablet)/.test(ua));
+      let isPhone = /(?:iPhone)/.test(ua) && !isTablet;
+      let isPc = !isPhone && !isAndroid && !isSymbian;
+      let isWechat = /(?:MicroMessenger)/.test(ua);
+
+      return {
+        isTablet: isTablet,
+        isPhone: isPhone,
+        isAndroid: isAndroid,
+        isPc: isPc,
+        isWechat: isWechat
+      };
+    }
+  </script>
+</body>
+</html>

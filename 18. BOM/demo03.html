@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let target = Math.floor(Math.random() * 100 + 1);
+       
+
+        //遞歸函數:在函數體內調用自己
+        function guessNumber(){
+            let number = prompt("請輸入你的數字");
+            if(number == target){
+                alert("恭喜你回答正確:");
+            }else if(number > target){
+                alert("大於目標結果");
+                guessNumber();
+            }else if(number < target){
+                alert("小於目標結果");
+                guessNumber();
+            }
+        }
+        guessNumber();
+    </script>
+</body>
+</html>

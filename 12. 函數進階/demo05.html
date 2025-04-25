@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 箭頭函數基本語法
+        // const fun = x =>x * x;        
+        // let result =fun(2);
+        // console.log(result);
+
+        const cat = {
+            name:"喵喵",
+            sayName(){
+                setInterval(() => {
+                    console.log(this.name)
+                },1000)
+            }
+        }
+        cat.sayName();
+
+        // 箭頭函數和普通函數的this指向不同
+        // 普通函數指向的是調用該函數對象
+        // 箭頭函數:在哪定義，this就指向誰
+    </script>
+</body>
+</html>

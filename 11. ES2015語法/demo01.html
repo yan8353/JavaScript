@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let str ="hello";
+        // let str1="world";
+        // console.log(str);
+
+        // const PI= 3.14;
+        // PI =1.2;
+        // console.log(PI)
+
+        // const fun = function(){
+        //     console.log("hello world")
+
+        // }
+        // fun();
+
+        // function getObject(){
+        //     return {name: "小明"};
+        // }
+        
+        // const xm =getObject();
+        // xm.name ="小紅"
+        // console.log(xm.name);
+
+        // let str =`hello
+        //  world`;
+        // console.log(str);
+
+        // let year ="2025";
+        // let month = "3";
+        // let date = "10";
+
+        // // let result = year + "年" + month + "月" + date +"日";
+        // let result = `${year}年${month}月${date}日`;
+        // console.log (result);
+
+        // 結構賦值
+        // let [n,m] =[10, 20];
+
+        // let n = 10;
+        // let m = 20;
+        
+        // // let temp;
+        // // temp = n;
+        // // n=m ;
+        // // m= temp;
+        // [n,m]=[m,n];
+
+        // let name ="小明";
+        // let age =10;
+        
+        // let {name,age} = {name:"小明",age:10};
+
+        // console.log(name);
+        // console.log(age);
+
+        let xm = {name:"小明",age:10};
+
+        function getName( {name} ){
+            return name;
+        }
+        let result = getName(xm);
+
+        console.log(result);
+    </script>
+    
+</body>
+</html>

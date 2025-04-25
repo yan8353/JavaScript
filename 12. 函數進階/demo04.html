@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 作用域鏈
+        // let str = "hello"
+        // function fun1(){
+        //     let str ="world";
+        //     let num =10;        //執行完成會被銷毀    
+        //     function fun2(){
+        //         let num =20;
+        //         console.log(str);
+        //         console.log(num);
+        //     }
+        //     fun2();
+        // }        
+        // fun1();
+        // console.log(num);
+        
+        // 閉包
+        // 利用閉包實現程式的封裝
+        // 閉包的特性:內部函數未執行完，外部函數即使執行完成
+        //外部函數中的變亮也不會被銷毀
+        function fun1(){
+            let n = 10;
+            let m =20;
+            function fun2(){
+                return n+m;
+            }
+            return fun2;            
+        }
+        
+        const f = fun1();
+        const result =f();
+        console.log(result)
+
+        
+    </script>
+</body>
+</html>

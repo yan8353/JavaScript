@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES5是沒有類的概念，通過構造函數來實現類
+        // 構造函數的函數名，首字母大寫
+        // 構造函數是用來創建對象用的
+        function Dog(name,age){
+            this.name = name;
+            this.age= age;
+        }
+
+        // 通過圓形對象，為構造函數生成的對象賦予新的方法
+        Dog.prototype.sayName = function(){
+            console.log(`我的名字是${this.name}`)
+        }
+    
+        var dog = new Dog("小黃",2); //創建了一個對象，狗類的實例
+        var bigDog = new Dog("二哈",3);
+        dog.sayName();
+        bigDog.sayName();
+
+
+    </script>
+</body>
+</html>
