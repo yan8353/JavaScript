@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 這段程式是用來說明在全域作用域中被 window 呼叫的函式
+    ，this 會指向 window 本身。 -->
+    <script>
+        // window.setTimeout(() => {
+        //     console.log("hello world")
+        // },1000)
+
+        function fun (){
+            console.log(this);            
+        }
+        window.fun();
+    </script>
+</body>
+</html>

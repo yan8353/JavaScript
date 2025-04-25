@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 一個簡單的「計時器」功能，包含開始、暫停、結束三個按鈕操作 -->
+    <button class="start">開始</button>
+    <button class="pause">暫停</button>
+    <button class="stop">結束</button>
+    <h1 class="time">10:9</h1>
+    <script>
+        let start = document.querySelector(".start")
+        let pause = document.querySelector(".pause")
+        let stop = document.querySelector(".stop")
+        let time = document.querySelector(".time")
+        let seconds = 0;
+        let ms =0;
+        time.innerHTML = `${seconds}:${ms}`;
+        let timer =null;
+        start.onclick = function(){
+            clearInterval(timer);
+            timer = setInterval(() => {
+                if(ms === 9){
+                    ++seconds;
+                    ms = 0;
+                }
+                ++ms;
+                time.innerHTML = `${seconds}:${ms}`;
+            },100)
+        }
+        pause.onclick = function(){
+            clearInterval(timer);
+        }
+        stop.onclick = function(){
+            seconds = 0;
+            ms =0;
+            time.innerHTML = `${seconds}:${ms}`;
+        }
+    </script>
+</body>
+</html>

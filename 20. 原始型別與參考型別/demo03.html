@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 建立學生資料並存入學生清單中 -->
+    <input type="text" class="name" placeholder="姓名">
+    <input type="text" class="age" placeholder="年齡">
+    <button>新增</button>
+    <script>
+        let inputName = document.querySelector(".name")
+        let inputAge = document.querySelector(".age")
+        let btn = document.querySelector("button")
+        let studentList = [];
+        let student = {};
+        class Student{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+        }
+        btn.onclick = function(){
+            // student.name = inputName.value;
+            // student.age = inputAge.value; 
+            let student = new Student(inputName.value,inputAge.value);
+            studentList.push(student);
+            console.log(studentList);
+        }
+    </script>
+</body>
+</html>

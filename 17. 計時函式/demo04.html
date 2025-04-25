@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  延遲 2 秒後印出 "hello world"，但如果你在 2 秒內按下「停止」按鈕，就不會印出任何東西。 -->
+    <button>停止</button>
+    <script>
+        let timer =null;
+        document.querySelector("button").onclick = function(){
+            clearTimeout(timer);
+        }
+        timer = setTimeout(() => {
+            console.log("hello world")
+        },2000)
+    </script>
+</body>
+</html>

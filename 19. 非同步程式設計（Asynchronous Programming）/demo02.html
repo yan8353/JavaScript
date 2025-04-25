@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 這段程式用 Promise + async/await 模擬向伺服器異步獲取資料
+        （如：AJAX），並依序處理資料結果。 -->
+    <script>
+        //ajax與服務器通信，異步獲取資料
+
+        // 異步獲取資料的方法
+        let target = "hello world"
+        
+        // 獲取資料的方法: 1.用回調函數獲取資料 ; 2.用promise對對象獲取資料
+        
+        
+        // 回調函數
+        // function getDate(fn){
+        //     setTimeout(() => {
+        //         //return只能返回同步的資料
+        //         fn(target);
+        //     },500)
+        // }
+
+        //promise版本getData
+        function getDate(){
+            return new Promise( (resolve) => {
+                setTimeout( () => {
+                    resolve(target);
+                },1000)
+            })
+        }
+
+        //3.async函數解決異步問題
+
+        async function fun() {
+            let data1 = await getDate();
+            console.log(data1);
+            let data2 = await getDate();
+            console.log(data2);
+            let data3 = await getDate();
+            console.log(data3);
+            
+            
+        }
+        fun();
+
+        // 我們只能通過getDate來獲取資料(target)
+        // getDate ( (d) => {
+        //     console.log(d);
+        // })
+
+        // let p = getDate();
+        // p.then( (data) => {
+        //     console.log(data);
+        // })
+
+        
+    </script>
+</body>
+</html>

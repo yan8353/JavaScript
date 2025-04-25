@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 這段程式透過 setTimeout() 模擬不同時間點發送簡訊的非同步排程行為。 -->
+    <script>
+        // console.log("給1打電話");
+        // console.log("給2打電話");
+        // console.log("給3打電話");
+        // console.log("給4打電話");
+        // console.log("給5打電話");
+
+        //setTimeout
+        setTimeout(() => {console.log("給1發簡訊")},200);
+        setTimeout(() => {console.log("給2發簡訊")},500);
+        setTimeout(() => {console.log("給3發簡訊")},2000);
+        setTimeout(() => {console.log("給4發簡訊")},100);
+        setTimeout(() => {console.log("給5發簡訊")},900);        
+    </script>
+</body>
+</html>

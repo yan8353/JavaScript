@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 點擊水果 → 詢問是否刪除 → 確認後移除該項目
+        是一個簡單的 清單項目刪除功能實作範例 -->
+    <ul class="fruit-list">
+        <li>香蕉</li>
+        <li>蘋果</li>
+        <li>橘子</li>
+    </ul>
+    <script>
+        let ul = document.querySelector(".fruit-list")
+        ul.onclick = function(e){
+            let mark = confirm("是否刪除此結果， 刪除資料後不能恢復");
+            if(mark){
+                ul.removeChild(e.target);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 每2秒console 輸出一次hello world 按下暫停鍵即停止 -->
+    <button>暫停</button>
+    <script>
+        let timer = setInterval(() => {
+            console.log("hello world")
+        },2000)
+        let btn = document.querySelector("button");
+        btn.onclick =function(){
+            clearInterval(timer)
+        }
+        
+    </script>
+</body>
+</html>
